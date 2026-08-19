@@ -1,0 +1,74 @@
+{
+    "best_model": "Naive Bayes",
+    "trained_at": "2026-08-13 19:03:51",
+    "total_samples": 170,
+    "train_samples": 136,
+    "test_samples": 34,
+    "vocab_size": 1100,
+    "models_performance": {
+        "Logistic Regression": {
+            "accuracy": 0.7059,
+            "precision": 0.7059,
+            "recall": 1.0,
+            "f1_score": 0.8276,
+            "confusion_matrix": [
+                [
+                    0,
+                    10
+                ],
+                [
+                    0,
+                    24
+                ]
+            ]
+        },
+        "Naive Bayes": {
+            "accuracy": 0.9412,
+            "precision": 0.9231,
+            "recall": 1.0,
+            "f1_score": 0.96,
+            "confusion_matrix": [
+                [
+                    8,
+                    2
+                ],
+                [
+                    0,
+                    24
+                ]
+            ]
+        },
+        "Linear SVM": {
+            "accuracy": 0.8824,
+            "precision": 0.8571,
+            "recall": 1.0,
+            "f1_score": 0.9231,
+            "confusion_matrix": [
+                [
+                    6,
+                    4
+                ],
+                [
+                    0,
+                    24
+                ]
+            ]
+        },
+        "Random Forest": {
+            "accuracy": 0.7059,
+            "precision": 0.7059,
+            "recall": 1.0,
+            "f1_score": 0.8276,
+            "confusion_matrix": [
+                [
+                    0,
+                    10
+                ],
+                [
+                    0,
+                    24
+                ]
+            ]
+        }
+    }
+}

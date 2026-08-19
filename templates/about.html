@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block title %}About - Cyberbullying Detection System{% endblock %}
+
+{% block content %}
+<div class="hero-banner shadow-sm mb-4" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+    <div class="row align-items-center">
+        <div class="col-lg-8">
+            <h1 class="fw-bold display-5 text-white mb-2">About CyberGuard AI</h1>
+            <p class="lead text-white-50 mb-0">An automated Machine Learning and Natural Language Processing (NLP) system designed to detect, classify, and mitigate cyberbullying and online toxicity.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Purpose Section -->
+<div class="row g-4 mb-5">
+    <div class="col-lg-6">
+        <div class="custom-card p-4 h-100">
+            <h4 class="fw-bold text-dark mb-3">
+                <i class="bi bi-bullseye text-primary me-2"></i>Purpose & Objective
+            </h4>
+            <p class="text-secondary mb-3">With the rapid growth of social media platforms, cyberbullying has emerged as a critical societal issue affecting millions of individuals globally. Traditional manual moderation cannot scale to handle millions of posts generated every second.</p>
+            <p class="text-secondary mb-0">This project provides a robust, machine-learning-driven solution capable of identifying toxic messages in real-time. By classifying content into specific harassment categories (such as gender-based toxicity, racial/ethnic discrimination, religious hate, and general abusive language), the system enables proactive online protection.</p>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="custom-card p-4 h-100">
+            <h4 class="fw-bold text-dark mb-3">
+                <i class="bi bi-diagram-3-fill text-primary me-2"></i>How NLP Detection Works
+            </h4>
+            <ol class="list-group list-group-numbered border-0">
+                <li class="list-group-item border-0 ps-0 text-secondary">
+                    <strong class="text-dark">Text Preprocessing:</strong> Converts raw text to lowercase, removes URLs, user mentions (@username), hashtags (#), numbers, punctuation, and stopwords using NLTK.
+                </li>
+                <li class="list-group-item border-0 ps-0 text-secondary">
+                    <strong class="text-dark">Lemmatization:</strong> Reduces words to their canonical dictionary root forms using WordNet Lemmatizer.
+                </li>
+                <li class="list-group-item border-0 ps-0 text-secondary">
+                    <strong class="text-dark">TF-IDF Vectorization:</strong> Transforms text into numerical feature vectors based on Term Frequency-Inverse Document Frequency.
+                </li>
+                <li class="list-group-item border-0 ps-0 text-secondary">
+                    <strong class="text-dark">ML Classification:</strong> Classifies vectors using trained Machine Learning models (Linear SVM, Logistic Regression, Naive Bayes, Random Forest).
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<!-- Technology Stack Grid -->
+<div class="mb-5">
+    <h4 class="fw-bold text-dark mb-3">
+        <i class="bi bi-stack text-primary me-2"></i>Technology Stack
+    </h4>
+    <div class="row g-3">
+        <div class="col-md-4">
+            <div class="custom-card p-3 d-flex align-items-center gap-3">
+                <div class="fs-2 text-primary">🐍</div>
+                <div>
+                    <strong class="d-block text-dark">Python & Flask</strong>
+                    <span class="text-muted small">Backend API server and routing framework.</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="custom-card p-3 d-flex align-items-center gap-3">
+                <div class="fs-2 text-success">🤖</div>
+                <div>
+                    <strong class="d-block text-dark">Scikit-Learn & NLTK</strong>
+                    <span class="text-muted small">NLP tokenization, TF-IDF, and ML classifiers.</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="custom-card p-3 d-flex align-items-center gap-3">
+                <div class="fs-2 text-info">🗄️</div>
+                <div>
+                    <strong class="d-block text-dark">SQLite Database</strong>
+                    <span class="text-muted small">Detection logging and history persistence.</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="custom-card p-3 d-flex align-items-center gap-3">
+                <div class="fs-2 text-warning">🎨</div>
+                <div>
+                    <strong class="d-block text-dark">Bootstrap 5 & CSS3</strong>
+                    <span class="text-muted small">Modern responsive frontend interface.</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="custom-card p-3 d-flex align-items-center gap-3">
+                <div class="fs-2 text-danger">📊</div>
+                <div>
+                    <strong class="d-block text-dark">Chart.js</strong>
+                    <span class="text-muted small">Interactive dashboard charts & analytics.</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="custom-card p-3 d-flex align-items-center gap-3">
+                <div class="fs-2 text-secondary">📦</div>
+                <div>
+                    <strong class="d-block text-dark">Joblib</strong>
+                    <span class="text-muted small">Model serialization and disk persistence.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Helplines & Safety Resources -->
+<div class="custom-card p-4 border-danger-subtle bg-danger-subtle bg-opacity-25">
+    <h4 class="fw-bold text-danger mb-2">
+        <i class="bi bi-heart-pulse-fill me-2"></i>Cyberbullying Support & Helplines
+    </h4>
+    <p class="text-secondary small mb-3">If you or someone you know is experiencing severe online harassment, bullying, or distress, please reach out to international support organizations:</p>
+    <div class="row g-3">
+        <div class="col-md-4">
+            <div class="bg-white p-3 rounded-3 shadow-sm">
+                <strong class="d-block text-dark">StopBullying.gov</strong>
+                <span class="text-muted small">Cyberbullying prevention & support guides.</span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bg-white p-3 rounded-3 shadow-sm">
+                <strong class="d-block text-dark">Cyberbullying Research Center</strong>
+                <span class="text-muted small">Resources for students, educators & parents.</span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bg-white p-3 rounded-3 shadow-sm">
+                <strong class="d-block text-dark">Crisis Text Line</strong>
+                <span class="text-muted small">Free 24/7 mental health crisis support.</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

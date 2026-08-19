@@ -1,0 +1,171 @@
+tweet_text,cyberbullying_type
+"You are such a wonderful person, hope you have a great day!",not_cyberbullying
+"I really love learning about data science and machine learning.",not_cyberbullying
+"Great performance by the team in yesterday's match!",not_cyberbullying
+"Thanks for sharing this helpful article, I really appreciated it.",not_cyberbullying
+"The weather today is so pleasant and calm.",not_cyberbullying
+"Congratulations on your graduation! So proud of you.",not_cyberbullying
+"Can someone help me debug this Python Flask code?",not_cyberbullying
+"Had a nice cup of coffee this morning while reading a book.",not_cyberbullying
+"Music has a way of healing the soul when you're feeling down.",not_cyberbullying
+"Always remember to stay positive and keep working hard.",not_cyberbullying
+"Girls are so stupid and useless, they should stay in the kitchen.",gender
+"Women don't belong in tech, you're only hired because of diversity quotas.",gender
+"She is such a fake person, no guy will ever love a dumb girl like her.",gender
+"All women are emotional gold-diggers who ruin everything.",gender
+"Shut up you dumb female, nobody cares about your opinion.",gender
+"Go back to your country you worthless immigrant!",ethnicity
+"Your race is inferior and lazy, nobody wants you here.",ethnicity
+"Stop talking you dirty foreigner, you don't belong in our nation.",ethnicity
+"All people of your ethnicity are criminals and thieves.",ethnicity
+"Get out of our city, your kind is ruining our culture.",ethnicity
+"Your religion is a joke and all of you are brainwashed fools.",religion
+"You worship a fake god, you all deserve to suffer.",religion
+"Your religious beliefs are disgusting and evil.",religion
+"Nobody respects your faith, go away with your stupid prayers.",religion
+"Your whole religious group is full of terrorists and extremists.",religion
+"You are too old and useless, nobody cares about your boomer thoughts.",age
+"Shut up old man, your generation ruined the economy and future.",age
+"Look at this ancient dinosaur trying to use technology, so pathetic.",age
+"Grandma step away from the internet, you're too old to understand.",age
+"Nobody wants old people around here, just retire and vanish.",age
+"You are so ugly and disgusting, nobody will ever like you.",other_cyberbullying
+"Go kill yourself, the world would be much better without you.",other_cyberbullying
+"You are a total loser, nobody likes you and everyone talks behind your back.",other_cyberbullying
+"Posting your picture so everyone can laugh at how hideous you look.",other_cyberbullying
+"You are trash and useless, stop existing.",other_cyberbullying
+"We are going to make sure your life becomes a living nightmare.",other_cyberbullying
+"You're a pathetic coward, hiding behind your keyboard.",other_cyberbullying
+"Everyone hates you, just give up already.",other_cyberbullying
+"What a loser, you can't even get a simple task right.",other_cyberbullying
+"Stop posting your cringe videos, you look ridiculous.",other_cyberbullying
+"Working on a new software engineering project today.",not_cyberbullying
+"Healthy eating habits are essential for maintaining good wellness.",not_cyberbullying
+"I am excited to start my internship at the new company next week.",not_cyberbullying
+"Reading books helps improve critical thinking and vocabulary.",not_cyberbullying
+"Exploring new recipes and cooking dinner with family tonight.",not_cyberbullying
+"Let's collaborate on this open source GitHub repository.",not_cyberbullying
+"The public library has an amazing collection of historic literature.",not_cyberbullying
+"Regular exercise boosts your energy levels and mental health.",not_cyberbullying
+"Learning to play the acoustic guitar has been a fun journey.",not_cyberbullying
+"Attending a workshop on artificial intelligence and ethics.",not_cyberbullying
+"Dumb blonde girls can't handle real engineering work.",gender
+"She is just trying to get attention, typical dramatic female.",gender
+"No woman knows how to drive properly, stay off the road.",gender
+"Female gamers are garbage and shouldn't play competitive games.",gender
+"Why do women think they can speak on serious political matters?",gender
+"All immigrants are taking away our jobs, send them all back.",ethnicity
+"Your ethnic group is dirty and lacks basic manners.",ethnicity
+"Why don't you go back to where you came from, alien?",ethnicity
+"People from your country are ignorant and uneducated.",ethnicity
+"Look at that illegal alien trying to pretend they belong.",ethnicity
+"Your church/mosque/temple should be shut down completely.",religion
+"Faithful fools following fairy tales, you're all brainwashed.",religion
+"Your religious people are toxic and spread hatred everywhere.",religion
+"I despise your religion and everything it stands for.",religion
+"Stop spreading your religious nonsense here, nobody wants it.",religion
+"Boomers should be banned from making decisions for young people.",age
+"You are way past your prime, stop trying to act young and relevant.",age
+"Old people are a burden on society and waste our resources.",age
+"Look at this boomer trying to understand memes, embarrassing.",age
+"Your opinion is invalid because you're an old washed up loser.",age
+"You are worthless and nobody in this world cares about you.",other_cyberbullying
+"Do us all a favor and delete your account and disappear.",other_cyberbullying
+"You deserve all the terrible things happening to you right now.",other_cyberbullying
+"Everyone is laughing at your pathetic life.",other_cyberbullying
+"You are a fraud, a liar, and a complete disgrace.",other_cyberbullying
+"I hope bad things happen to you and your family.",other_cyberbullying
+"You are disgusting inside and out, nobody wants you around.",other_cyberbullying
+"Idiot, shut your mouth before someone makes you.",other_cyberbullying
+"You're incompetent and embarrassing to look at.",other_cyberbullying
+"Why are you so stupid? You ruin everything you touch.",other_cyberbullying
+"Enjoying a sunny afternoon walk in the park.",not_cyberbullying
+"Deep learning algorithms require proper GPU acceleration for large datasets.",not_cyberbullying
+"Thank you for the warm welcome to the community forum!",not_cyberbullying
+"Planning a weekend hiking trip with close friends.",not_cyberbullying
+"Art and design add beauty and perspective to our daily lives.",not_cyberbullying
+"Congratulations to the winners of the national science contest!",not_cyberbullying
+"Practicing mindfulness and meditation helps reduce daily stress.",not_cyberbullying
+"The new railway line connects remote towns to the main city center.",not_cyberbullying
+"Always double check your code before committing changes to main.",not_cyberbullying
+"Volunteering at the local shelter was an inspiring experience.",not_cyberbullying
+"Women are too weak to lead any serious organization.",gender
+"She got promoted only because of her looks, not her brain.",gender
+"Girls are useless at math and science, stick to makeup.",gender
+"Stop whining like a typical hysterical female.",gender
+"Men are far superior leaders than any woman could ever be.",gender
+"Your entire tribe is backward and uncultured.",ethnicity
+"Racial slurs and offensive insults against your background.",ethnicity
+"You people are a stain on this country's history.",ethnicity
+"Foreigners are destroying our neighborhoods and values.",ethnicity
+"You don't deserve rights because of your ethnic background.",ethnicity
+"Your holy book is garbage and preaches nonsense.",religion
+"Religions like yours should be outlawed permanently.",religion
+"All members of your faith are hypocrites and fanatics.",religion
+"You pray to a nonexistent deity, how delusional.",religion
+"Ban all followers of your religion from entering our country.",religion
+"Old people shouldn't be allowed to vote or voice opinions.",age
+"Get off the platform, you old decrepit boomer.",age
+"Your old brain can't comprehend modern technology.",age
+"Why are old people so slow and useless at everything?",age
+"You're a fossil, go retire and shut up.",age
+"Jump off a bridge, nobody would miss you for even a second.",other_cyberbullying
+"You are an absolute waste of oxygen.",other_cyberbullying
+"I will leak your private details and expose your secrets.",other_cyberbullying
+"You are a coward who hides behind anonymity.",other_cyberbullying
+"You deserve to be bullied and mocked every single day.",other_cyberbullying
+"Get out of here you toxic piece of trash.",other_cyberbullying
+"You're stupid, ugly, and nobody will ever care about you.",other_cyberbullying
+"Look at this absolute fool fail at life.",other_cyberbullying
+"You're pathetic and nobody believes your lies.",other_cyberbullying
+"Stop talking, your voice is annoying and worthless.",other_cyberbullying
+"Standardizing code styling across all project modules.",not_cyberbullying
+"The sunrise this morning had vibrant orange and purple colors.",not_cyberbullying
+"Effective communication is key to successful teamwork.",not_cyberbullying
+"Learning new languages broadens cultural perspective.",not_cyberbullying
+"The solar panel installation helped reduce electricity bills.",not_cyberbullying
+"Sustainable agriculture plays a key role in food security.",not_cyberbullying
+"A balanced diet and adequate sleep improve overall health.",not_cyberbullying
+"The museum exhibition featured rare historical artifacts.",not_cyberbullying
+"Setting clear goals helps track personal and professional progress.",not_cyberbullying
+"Always show kindness and empathy toward others.",not_cyberbullying
+"Girls are just visual objects, they have no intellect.",gender
+"Why do women expect equal pay when they do less work?",gender
+"She is just an annoying feminist complaining about nothing.",gender
+"Female bosses are bossy and unbearable to work with.",gender
+"No man respects a loud and opinionated woman.",gender
+"Your people don't belong in higher education or good jobs.",ethnicity
+"Go back to your village, dirty foreigner.",ethnicity
+"Your race is naturally aggressive and untrustworthy.",ethnicity
+"Why do we let people of your ethnicity into our society?",ethnicity
+"You're a leech on our economy, get out.",ethnicity
+"Your religion promotes violence and ignorance.",religion
+"You're a fanatic following a brainwashing cult.",religion
+"Your faith is ridiculous and deserves zero respect.",religion
+"Religious zealots like you are what's wrong with society.",religion
+"Stop shoving your worthless religion down our throats.",religion
+"Boomers are ruining the internet with their stupidity.",age
+"You are an old senile fool who shouldn't speak.",age
+"Why do old people think they are so wise? You know nothing.",age
+"You're past your expiration date, step aside boomer.",age
+"Grandpa needs to log off and take his meds.",age
+"Go end your life, nobody wants you here.",other_cyberbullying
+"You are disgusting and hideous, stop showing your face.",other_cyberbullying
+"I hope you fail at everything you try to do.",other_cyberbullying
+"You're an irredeemable loser with no friends.",other_cyberbullying
+"We will ruin your reputation completely.",other_cyberbullying
+"You are a useless worm that nobody cares about.",other_cyberbullying
+"Cry more you weak pathetic baby.",other_cyberbullying
+"You're trash, garbage, and a total disappointment.",other_cyberbullying
+"Stop breathing, you're taking up valuable space.",other_cyberbullying
+"Everyone is disgusted by your presence.",other_cyberbullying
+"Listening to acoustic music while relaxing in the garden.",not_cyberbullying
+"The modern library system provides free access to digital media.",not_cyberbullying
+"Writing modular clean code makes refactoring much easier.",not_cyberbullying
+"Community garden initiatives promote urban sustainability.",not_cyberbullying
+"A warm cup of tea on a rainy afternoon is so comforting.",not_cyberbullying
+"Teamwork and mutual respect lead to great achievements.",not_cyberbullying
+"The astronomy presentation explained how stars and galaxies form.",not_cyberbullying
+"Developing good study habits early leads to long-term success.",not_cyberbullying
+"Mindfulness exercises help reduce daily anxiety and stress.",not_cyberbullying
+"Celebrating milestones with friends and family brings joy.",not_cyberbullying

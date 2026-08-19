@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}Statistics Dashboard - Cyberbullying Detection System{% endblock %}
+
+{% block content %}
+<div class="mb-4">
+    <h2 class="fw-bold text-dark m-0">
+        <i class="bi bi-bar-chart-line text-primary me-2"></i>System Analytics & Statistics
+    </h2>
+    <p class="text-muted mb-0 small">Real-time aggregate detection metrics and visual trend charts from SQLite database.</p>
+</div>
+
+<!-- Metric Cards Grid -->
+<div class="row g-4 mb-4">
+    <div class="col-xl-3 col-md-6">
+        <div class="metric-card shadow-sm h-100">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="text-muted fw-semibold small text-uppercase">Total Analyzed</span>
+                <div class="icon-box bg-primary-subtle text-primary">
+                    <i class="bi bi-chat-left-dots-fill"></i>
+                </div>
+            </div>
+            <div id="statTotal" class="metric-number">0</div>
+            <span class="text-muted small">Total messages processed</span>
+        </div>
+    </div>
+    
+    <div class="col-xl-3 col-md-6">
+        <div class="metric-card shadow-sm h-100">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="text-muted fw-semibold small text-uppercase">Cyberbullying</span>
+                <div class="icon-box bg-danger-subtle text-danger">
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+                </div>
+            </div>
+            <div id="statCyberbullying" class="metric-number text-danger">0</div>
+            <span class="text-muted small">Flagged harmful messages</span>
+        </div>
+    </div>
+    
+    <div class="col-xl-3 col-md-6">
+        <div class="metric-card shadow-sm h-100">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="text-muted fw-semibold small text-uppercase">Clean Content</span>
+                <div class="icon-box bg-success-subtle text-success">
+                    <i class="bi bi-shield-check"></i>
+                </div>
+            </div>
+            <div id="statClean" class="metric-number text-success">0</div>
+            <span class="text-muted small">Verified safe messages</span>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6">
+        <div class="metric-card shadow-sm h-100">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="text-muted fw-semibold small text-uppercase">Detection Rate</span>
+                <div class="icon-box bg-warning-subtle text-warning">
+                    <i class="bi bi-percent"></i>
+                </div>
+            </div>
+            <div id="statPercentage" class="metric-number text-warning">0.0%</div>
+            <span class="text-muted small">Toxicity prevalence ratio</span>
+        </div>
+    </div>
+</div>
+
+<!-- Charts Row -->
+<div class="row g-4 mb-4">
+    <div class="col-lg-5">
+        <div class="custom-card p-4 h-100">
+            <h5 class="fw-bold text-dark mb-3">
+                <i class="bi bi-pie-chart-fill text-primary me-2"></i>Detection Ratio
+            </h5>
+            <div class="chart-container py-3 position-relative">
+                <canvas id="chartCyberbullyingDonut"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-7">
+        <div class="custom-card p-4 h-100">
+            <h5 class="fw-bold text-dark mb-3">
+                <i class="bi bi-bar-chart-fill text-primary me-2"></i>Toxicity Category Breakdown
+            </h5>
+            <div class="chart-container py-3 position-relative">
+                <canvas id="chartCategoryBar"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

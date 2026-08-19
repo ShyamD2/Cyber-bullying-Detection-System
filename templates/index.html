@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Cyberbullying Detection System{% endblock %}
+
+{% block content %}
+<!-- Hero Section Banner -->
+<div class="hero-banner shadow-sm mb-4">
+    <div class="row align-items-center">
+        <div class="col-lg-8">
+            <span class="badge bg-white text-primary fw-bold px-3 py-2 rounded-pill mb-3">AI Powered NLP System</span>
+            <h1 class="fw-extrabold display-5 text-white mb-2">Real-Time Cyberbullying Detection</h1>
+            <p class="lead text-white-50 mb-0">Analyze social media comments, online messages, and text content for toxicity, harassment, and cyberbullying using trained Machine Learning models.</p>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end mt-3 mt-lg-0">
+            <div class="d-inline-block bg-white bg-opacity-10 p-3 rounded-4 backdrop-blur">
+                <div class="text-white-50 small mb-1">Architecture</div>
+                <div class="fw-bold text-white fs-5">Scikit-Learn + TF-IDF</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Detection Form Card -->
+<div class="row g-4 mb-5">
+    <div class="col-lg-7">
+        <div class="custom-card p-4 h-100">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <h4 class="fw-bold m-0 text-dark">
+                    <i class="bi bi-chat-left-text-fill text-primary me-2"></i>Analyze Text Message
+                </h4>
+                <span id="charCount" class="badge bg-light text-secondary border">0 characters</span>
+            </div>
+
+            <form id="detectionForm">
+                <div class="mb-3">
+                    <textarea 
+                        id="inputText" 
+                        class="form-control detection-textarea" 
+                        placeholder="Paste or type a tweet, social media comment, or text message here to analyze..."
+                        rows="5"
+                        required></textarea>
+                </div>
+
+                <!-- Sample Prompts -->
+                <div class="mb-4">
+                    <span class="text-muted small d-block mb-2 fw-semibold">Try sample test inputs:</span>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button type="button" class="btn btn-sample" data-text="You are such a wonderful person, hope you have a great day!">
+                            😊 Clean Text
+                        </button>
+                        <button type="button" class="btn btn-sample" data-text="Girls are so stupid and useless, they should stay in the kitchen.">
+                            🚫 Gender Hate
+                        </button>
+                        <button type="button" class="btn btn-sample" data-text="Go back to your country you worthless immigrant!">
+                            🚫 Racial Bullying
+                        </button>
+                        <button type="button" class="btn btn-sample" data-text="You are so ugly and disgusting, nobody will ever like you. Go end your life.">
+                            ⚠️ Toxicity
+                        </button>
+                        <button type="button" class="btn btn-sample" data-text="Can someone help me debug this Python Flask code?">
+                            💻 Tech Question
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="btnDetect" class="btn btn-detect w-100 py-3">
+                    <span id="btnSpinner" class="spinner-border spinner-border-sm me-2 d-none" role="status"></span>
+                    <span id="btnText"><i class="bi bi-shield-lock me-2"></i>Detect Cyberbullying</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Output Result Container Area -->
+    <div class="col-lg-5">
+        <div class="custom-card p-4 h-100 d-flex flex-column">
+            <h4 class="fw-bold mb-3 text-dark">
+                <i class="bi bi-cpu-fill text-primary me-2"></i>Classification Result
+            </h4>
+            
+            <div id="resultArea" class="my-auto">
+                <div class="text-center py-5 text-muted">
+                    <div class="mb-3">
+                        <i class="bi bi-shield-check text-secondary opacity-50 display-1"></i>
+                    </div>
+                    <h5 class="fw-semibold text-secondary">Awaiting Text Input</h5>
+                    <p class="small text-muted mb-0">Enter text on the left and click "Detect Cyberbullying" to see real-time machine learning predictions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Feature Summary Row -->
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="metric-card shadow-sm h-100">
+            <div class="icon-box bg-primary-subtle text-primary mb-3">
+                <i class="bi bi-magic"></i>
+            </div>
+            <h5 class="fw-bold text-dark">NLP Text Preprocessing</h5>
+            <p class="text-muted small mb-0">Cleans noise, handles emojis, URLs, user mentions (@), hashtags, stopwords, and performs NLTK word lemmatization.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="metric-card shadow-sm h-100">
+            <div class="icon-box bg-danger-subtle text-danger mb-3">
+                <i class="bi bi-cpu"></i>
+            </div>
+            <h5 class="fw-bold text-dark">Multi-Model Training</h5>
+            <p class="text-muted small mb-0">Automatically compares Logistic Regression, Naive Bayes, Linear SVM, and Random Forest to pick the top performer.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="metric-card shadow-sm h-100">
+            <div class="icon-box bg-success-subtle text-success mb-3">
+                <i class="bi bi-database-check"></i>
+            </div>
+            <h5 class="fw-bold text-dark">SQLite Persistence</h5>
+            <p class="text-muted small mb-0">Every analyzed query, severity level, confidence score, and timestamp is stored securely in SQLite database.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

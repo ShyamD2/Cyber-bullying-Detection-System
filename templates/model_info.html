@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block title %}Model Information - Cyberbullying Detection System{% endblock %}
+
+{% block content %}
+<div class="mb-4">
+    <h2 class="fw-bold text-dark m-0">
+        <i class="bi bi-cpu-fill text-primary me-2"></i>Machine Learning Model Metrics & Performance
+    </h2>
+    <p class="text-muted mb-0 small">Evaluation benchmarks, TF-IDF feature details, algorithm comparison table, and confusion matrix.</p>
+</div>
+
+<!-- Active Best Model Hero Banner -->
+<div class="custom-card p-4 mb-4 bg-gradient-primary border-0 shadow-sm text-white" style="background: linear-gradient(135deg, #312e81, #4338ca);">
+    <div class="row align-items-center">
+        <div class="col-lg-7">
+            <span class="badge bg-success text-white px-3 py-2 rounded-pill fw-bold mb-2">⭐ Best Selected Algorithm</span>
+            <h2 id="metricBestModel" class="fw-bold text-white mb-2">Loading Model Name...</h2>
+            <p class="text-white-50 mb-0">Automatically selected as the top performing model based on test set F1-Score during automated cross-evaluation training.</p>
+        </div>
+        <div class="col-lg-5 mt-3 mt-lg-0 text-lg-end">
+            <div class="d-inline-flex flex-wrap gap-2 text-start bg-white bg-opacity-10 p-3 rounded-3">
+                <div>
+                    <span class="text-white-50 small d-block">Dataset Size</span>
+                    <strong id="metricTotalSamples" class="text-white fs-5">0</strong>
+                </div>
+                <div class="vr bg-white opacity-25 mx-2"></div>
+                <div>
+                    <span class="text-white-50 small d-block">Train / Test Split</span>
+                    <strong class="text-white fs-5"><span id="metricTrainSamples">0</span> / <span id="metricTestSamples">0</span></strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Key Performance Metrics Cards -->
+<div class="row g-4 mb-5">
+    <div class="col-md-3">
+        <div class="metric-card shadow-sm text-center">
+            <span class="text-muted fw-semibold small text-uppercase d-block mb-1">Accuracy</span>
+            <div id="metricAccuracy" class="metric-number text-primary">0.0%</div>
+            <span class="text-muted small">Overall correct predictions</span>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="metric-card shadow-sm text-center">
+            <span class="text-muted fw-semibold small text-uppercase d-block mb-1">Precision</span>
+            <div id="metricPrecision" class="metric-number text-success">0.0%</div>
+            <span class="text-muted small">Positive predictive value</span>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="metric-card shadow-sm text-center">
+            <span class="text-muted fw-semibold small text-uppercase d-block mb-1">Recall</span>
+            <div id="metricRecall" class="metric-number text-warning">0.0%</div>
+            <span class="text-muted small">Sensitivity / True Positive rate</span>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="metric-card shadow-sm text-center">
+            <span class="text-muted fw-semibold small text-uppercase d-block mb-1">F1-Score</span>
+            <div id="metricF1" class="metric-number text-dark">0.0%</div>
+            <span class="text-muted small">Harmonic mean of precision & recall</span>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- Algorithm Comparison Table -->
+    <div class="col-lg-7">
+        <div class="custom-card p-4 h-100">
+            <h4 class="fw-bold text-dark mb-3">
+                <i class="bi bi-table text-primary me-2"></i>Algorithm Comparison Matrix
+            </h4>
+            <p class="text-muted small mb-3">Performance evaluation across candidate algorithms trained on identical TF-IDF feature matrices:</p>
+
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Algorithm</th>
+                            <th>Accuracy</th>
+                            <th>Precision</th>
+                            <th>Recall</th>
+                            <th>F1-Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="modelComparisonTable">
+                        <!-- Populated via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confusion Matrix Card -->
+    <div class="col-lg-5">
+        <div class="custom-card p-4 h-100 text-center">
+            <h4 class="fw-bold text-dark mb-3">
+                <i class="bi bi-grid-3x3-gap-fill text-primary me-2"></i>Confusion Matrix
+            </h4>
+            <p class="text-muted small mb-4">Test set distribution of True vs Predicted class classifications:</p>
+
+            <div class="matrix-container mb-3">
+                <div class="matrix-cell cell-tn">
+                    <span class="d-block small text-uppercase text-muted mb-1">True Negative (TN)</span>
+                    <span id="cellTN" class="display-6 fw-bold">0</span>
+                    <span class="d-block text-muted small mt-1">Correctly Clean</span>
+                </div>
+                <div class="matrix-cell cell-fp">
+                    <span class="d-block small text-uppercase text-muted mb-1">False Positive (FP)</span>
+                    <span id="cellFP" class="display-6 fw-bold">0</span>
+                    <span class="d-block text-muted small mt-1">False Alarm</span>
+                </div>
+                <div class="matrix-cell cell-fn">
+                    <span class="d-block small text-uppercase text-muted mb-1">False Negative (FN)</span>
+                    <span id="cellFN" class="display-6 fw-bold">0</span>
+                    <span class="d-block text-muted small mt-1">Missed Cyberbullying</span>
+                </div>
+                <div class="matrix-cell cell-tp">
+                    <span class="d-block small text-uppercase text-muted mb-1">True Positive (TP)</span>
+                    <span id="cellTP" class="display-6 fw-bold">0</span>
+                    <span class="d-block text-muted small mt-1">Correctly Bullying</span>
+                </div>
+            </div>
+            
+            <span class="text-muted small">Evaluated on test split (20% holdout).</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
