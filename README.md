@@ -6,6 +6,10 @@ Built for college projects, this system integrates a real NLP machine-learning p
 
 ---
 
+## Output
+
+![Output Screenshot](./Screenshot.png)
+
 ## 🌟 Key Features
 
 - **Real NLP Machine Learning Pipeline**: Lowercasing, URL/mention/hashtag stripping, stopword removal, NLTK word lemmatization, and TF-IDF feature extraction.
